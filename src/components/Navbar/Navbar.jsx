@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { FaShoppingCart, FaBars } from 'react-icons/fa';
+import { useCart } from '../../contexts/CartContext';
+import CartDrawer from '../Cart/CartDrawer';
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const { totalItems } = useCart();
 
   return (
+    <>
     <div className="navbar">
       <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         <FaBars />
@@ -19,12 +24,18 @@ export const Navbar = () => {
         <li className='nav-sales'>Sales</li>
       </ul>
 
-      <div className="nav-cart">
+      <button className="nav-cart" onClick={() => setDrawerOpen(true)}>
         <FaShoppingCart size={24} color="white" />
-        <span className='cart-count'>
-          0
-        </span>
-      </div>
+        {totalItems > 0 && (
+          <span className="cart-count">{totalItems}</span>
+        )}
+      </button>
+      
+
     </div>
+      <CartDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
+    </>
+
+    
   );
 };
