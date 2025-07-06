@@ -1,0 +1,14 @@
+/* Men.css */
+
+.men-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(350px, 1fr)); /* exactly 3 cards per row */
+  gap: 2rem;                              /* space between cards */
+}
+

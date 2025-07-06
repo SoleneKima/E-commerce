@@ -47,3 +47,23 @@
     align-items: center;
     justify-content: center;
 }
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background:#88b993; color:#063103;
+  list-style:none; padding:1.5rem 2rem;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+  min-width:180px;
+  width: 100vw
+}
+.dropdown li {
+  margin:0; 
+  list-style: none;
+}
+
+.dropdown li:hover {
+     text-decoration: underline;
+      cursor: pointer; 
+}
