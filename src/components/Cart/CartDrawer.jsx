@@ -1,9 +1,10 @@
 // src/components/Cart/CartDrawer.jsx
 import { useCart } from "../../contexts/CartContext";
 import "./CartDrawer.css";
+import { Link } from "react-router-dom";
 
 export default function CartDrawer({ open, onClose }) {
-  const { cart, removeItem, totalPrice, clearCart } = useCart();
+  const { cart, removeItem, totalPrice} = useCart();
 
   return (
     <div
@@ -22,7 +23,7 @@ export default function CartDrawer({ open, onClose }) {
         </header>
 
         {cart.length === 0 ? (
-          <p className="empty">Cart is empty 😢</p>
+          <p className="empty">Cart is empty </p>
         ) : (
           <ul className="items">
             {cart.map(p => (
@@ -50,13 +51,9 @@ export default function CartDrawer({ open, onClose }) {
 
         <footer>
           <strong>Total: ${totalPrice.toFixed(2)}</strong>
-          <button
-            className="checkout-btn"
-            disabled={!cart.length}
-            onClick={clearCart}
-          >
-            Checkout
-          </button>
+          <Link to="/checkout">
+            <button disabled={!cart.length}>Checkout</button>
+          </Link>
         </footer>
       </aside>
     </div>

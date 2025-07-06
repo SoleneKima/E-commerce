@@ -93,3 +93,29 @@ footer { border-top:1px solid #ddd; margin-top:auto; }
   background: #aaa;
   cursor: not-allowed;
 }
+
+/* style the footer so its contents sit on either side */
+.drawer footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+/* make the Checkout button match your Submit Payment button */
+.drawer footer button {
+  background: #064c1a;       /* your dark-green background */
+  color: white;              /* white text */
+  border: none;
+  padding: 0.75rem 1.5rem;   /* same padding you use on Submit Payment */
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;        /* optional, if your other button has rounded corners */
+}
+
+/* ensure disabled state looks greyed out */
+.drawer footer button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}

@@ -19,7 +19,7 @@ export const products = [
     type: "sneakers",
     price: 150,
     img: noir,
-    isNew: true,
+    isNew: false,
   },
   {
     id: 2,
@@ -28,7 +28,6 @@ export const products = [
     gender: "men",
     type: "sneakers",
     price: 160,
-    salePrice: 90,
     img: blanc,
   },
   {
@@ -49,8 +48,6 @@ export const products = [
   gender: "men",                // or "women"/"kids"
   type: "loafers",
   price: 120,
-  /* optional salePrice for discounts */
-  salePrice: 115,
   img: brownloafers,
   /* optional flag for “New” badge */
   isNew: false                   // or false
@@ -77,8 +74,7 @@ export const products = [
   gender: "men",                // or "women"/"kids"
   type: "loafers",
   price: 170,
-  /* optional salePrice for discounts */
-  salePrice: 160,
+  
   img: beigeLoafers,
   /* optional flag for “New” badge */
   isNew: true                   // or false
@@ -91,8 +87,6 @@ export const products = [
   gender: "men",                // or "women"/"kids"
   type: "rainboots",
   price: 100,
-  /* optional salePrice for discounts */
-  salePrice: 90,
   img: blackrainboots,
   /* optional flag for “New” badge */
   isNew: false                   // or false
@@ -106,8 +100,7 @@ export const products = [
   gender: "men",                // or "women"/"kids"
   type: "rainboots",
   price: 150,
-  /* optional salePrice for discounts */
-  salePrice: 120,
+  
   img: bluerainboots,
   /* optional flag for “New” badge */
   isNew: true                   // or false

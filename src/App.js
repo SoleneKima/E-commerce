@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Men    from "./Pages/Men/Men.jsx";
+import Checkout from "./Pages/Checkout";
+import Confirmation from "./Pages/Confirmation";
 
 /* placeholder for now */
 const Home = () => (
@@ -28,6 +30,8 @@ export default function App() {
           <Route path="/men" element={<Men />} />
           {/* men + type page */}
           <Route path="/men/:type" element={<Men />} />
+          <Route path="/checkout" element={<Checkout />} />
+        <Route path="/confirmation" element={<Confirmation />} />
           {/* add more routes later */}
         </Routes>
       </>
