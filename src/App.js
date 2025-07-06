@@ -26,6 +26,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/men" element={<Men />} />
+          {/* men + type page */}
+          <Route path="/men/:type" element={<Men />} />
           {/* add more routes later */}
         </Routes>
       </>

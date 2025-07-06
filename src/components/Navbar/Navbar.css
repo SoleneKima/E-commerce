@@ -7,6 +7,7 @@
     position: relative;
     align-items: center;
     padding-left: 6px;
+    z-index: 10;
 }
 .nav-menu{
     margin: 0 auto;
@@ -47,23 +48,55 @@
     align-items: center;
     justify-content: center;
 }
-
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background:#88b993; color:#063103;
-  list-style:none; padding:1.5rem 2rem;
-  box-shadow:0 4px 12px rgba(0,0,0,.12);
-  min-width:180px;
-  width: 100vw
+/* ── anchor each menu item so its submenu can position itself ── */
+.nav-item {
+  position: relative;
 }
-.dropdown li {
-  margin:0; 
+
+/* ── hidden by default, absolutely positioned under its <li> ── */
+.dropdown {
+  display: none;              /* hide until hover */
+  position: absolute;
+  top: 100%;                  /* right below the parent li */
+  left: 0;                    /* left-align with the parent */
+  background: #88b993;
+  color: #063103;
   list-style: none;
+  padding: 0.5rem 1rem;       /* dial these in to taste */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  min-width: 160px;           /* don’t shrink below this */
+  border-radius: 4px;
+  /* width: auto by default → fits the longest text */
+  z-index: 100;
+}
+
+/* ── reveal the dropdown when hovering anywhere over the parent li ── */
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+/* ── dropdown list items ─────────────────────────────────────────── */
+.dropdown li {
+  margin: 0;
 }
 
 .dropdown li:hover {
-     text-decoration: underline;
-      cursor: pointer; 
+  text-decoration: underline;
+  cursor: pointer;
 }
+
+/* if you gave your <Link> a .dropdown-link class, you can style it: */
+.dropdown-link {
+  display: block;
+  padding: 0.5rem 0;
+  color: inherit;            /* will pick up #063103 */
+  text-decoration: none;
+  white-space: nowrap;
+}
+.dropdown-link:hover {
+  background: #f3f3f3;
+}
+
+
+
+

@@ -5,6 +5,11 @@ import red   from "../components/assets/Men/Ahletic_shoes/AdidasRed.jpg";
 import brownloafers from "../components/assets/Men/Souliers/BrownSouliers.jpg";
 import blackloafers from "../components/assets/Men/Souliers/SoulierNoir.jpg";
 import beigeLoafers from "../components/assets/Men/Souliers/beigeloafer.jpg";
+import blackrainboots from "../components/assets/Men/Boots/BlackBoots.jpg";
+import bluerainboots from "../components/assets/Men/Boots/blueboots.jpg";
+import brownrainboots from "../components/assets/Men/Boots/BrownBoots.jpg";
+
+
 export const products = [
   {
     id: 1,
@@ -77,6 +82,54 @@ export const products = [
   img: beigeLoafers,
   /* optional flag for “New” badge */
   isNew: true                   // or false
+ },
+
+ {
+  id: 7,
+  name: "Black Rainboots",
+  brand: "Hunter",
+  gender: "men",                // or "women"/"kids"
+  type: "rainboots",
+  price: 100,
+  /* optional salePrice for discounts */
+  salePrice: 90,
+  img: blackrainboots,
+  /* optional flag for “New” badge */
+  isNew: false                   // or false
+ },
+
+
+ {
+  id: 8,
+  name: "Blue Rainboots",
+  brand: "Hunter",
+  gender: "men",                // or "women"/"kids"
+  type: "rainboots",
+  price: 150,
+  /* optional salePrice for discounts */
+  salePrice: 120,
+  img: bluerainboots,
+  /* optional flag for “New” badge */
+  isNew: true                   // or false
+ },
+ 
+ 
+ {
+  id: 9,
+  name: "Brown Rainboots",
+  brand: "Hunter",
+  gender: "men",                // or "women"/"kids"
+  type: "rainboots",
+  price: 170,
+  /* optional salePrice for discounts */
+  salePrice: 120,
+  img: brownrainboots,
+  /* optional flag for “New” badge */
+  isNew: false                   // or false
  }
+
+
+
+
   
 ];

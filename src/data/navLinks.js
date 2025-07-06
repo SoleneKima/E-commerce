@@ -8,9 +8,8 @@ export const navLinks = [
     sub: [
       "Sneakers",
       "Loafers",
-      "Rain Boots",
-      "Dress Shoes",
-      "Athletic Shoes",
+      "Rainboots",
+      
     ],
   },
   { label: "Kids", path: "/kids" },
