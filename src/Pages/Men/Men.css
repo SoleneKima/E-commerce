@@ -8,7 +8,9 @@
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(350px, 1fr)); /* exactly 3 cards per row */
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 cards per row */
   gap: 2rem;                              /* space between cards */
+  max-width: 1200px;      /* optional: constrain total width */
+  margin: 0 auto;         /* center the grid */
 }
 

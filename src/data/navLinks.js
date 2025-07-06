@@ -12,6 +12,12 @@ export const navLinks = [
       
     ],
   },
-  { label: "Kids", path: "/kids" },
+  { label: "Kids",
+     path: "/kids",
+     sub: [
+      "Boys", 
+      "Girls",
+    ],
+  },
   { label: "Sales", path: "/sale" },
 ];
