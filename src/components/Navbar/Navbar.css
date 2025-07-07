@@ -20,10 +20,15 @@
     padding: 0;
 
 }
+.nav-menu a{
+    text-decoration: none;
+    color: white;
+}
 .nav-menu li{
     display: flex;
     align-items: center ;
     justify-content: center;
+    color: white;
 }
 .nav-cart {
   /* remove the square */
@@ -52,13 +57,17 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background:#88b993; color:#063103;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background:#3c7749; color:#063103;
   list-style:none; padding:1.5rem 2rem;
   box-shadow:0 4px 12px rgba(0,0,0,.12);
   min-width:180px;
-  width: 100vw
+  width: 100vw;
+   z-index: 9999;
 }
-.dropdown li {
+.dropdown-link {
+    display: block;
   margin:0; 
   list-style: none;
 }

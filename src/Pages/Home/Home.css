@@ -1,0 +1,75 @@
+/*Home.css*/
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Henny+Penny&family=Satisfy&display=swap');
+
+.home-content{
+ display: block;
+ color: black;
+}
+
+.home-header{
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight:800;
+  font-style:normal;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.home-main {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.section {
+  flex: 1;
+  min-width: 0; 
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.home-image {
+   width: 100%;
+  height: 600px; /* Hauteur fixe identique */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.home-image:hover {
+  transform: scale(1.02);
+}
+
+.section-button {
+    display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #0a400c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+ margin-right: 100px;
+
+  font-weight: bold;
+ 
+}
+
+.section-button:hover {
+  background-color: #0d5a10;
+}

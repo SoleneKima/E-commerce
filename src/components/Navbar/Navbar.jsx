@@ -38,7 +38,15 @@ export default function Navbar() {
               {link.sub && activeMenu === link.label && (
                 <ul className="dropdown">
                   {link.sub.map(item => (
-                    <li key={item}>{item}</li>
+                    <li key={item}>
+  <Link
+    to={`${link.path}?filter=${item.toLowerCase()}`}
+    className="dropdown-link"
+  >
+    {item}
+  </Link>
+</li>
+
                   ))}
                 </ul>
               )}

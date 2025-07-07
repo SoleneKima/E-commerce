@@ -1,18 +1,25 @@
 
 export const navLinks = [
-  { label: "New and Featured", path: "/new" },          // no dropdown yet
-  { label: "Women", path: "/women" },
+  { label: "Home", path: "/" },          // no dropdown yet
+  
+  //Facets for Women Link
+  { label: "Women", 
+    path: "/women",
+    sub: ["New","Heels","Sneakers","Sandals"],
+  },
+  
+  // Facets for Men Link
   {
     label: "Men",
     path: "/men",
-    sub: [
-      "Sneakers",
-      "Loafers",
-      "Rain Boots",
-      "Dress Shoes",
-      "Athletic Shoes",
-    ],
+    sub: ["New","Sneakers","Loafers", "Boots","Dress Shoes" ],
   },
+  
+  //Facets for Kids Link
   { label: "Kids", path: "/kids" },
-  { label: "Sales", path: "/sale" },
+
+  // Facets for Sales Link
+  { label: "Sales", path: "/sale" ,
+    sub:["Women","Men","Kids"],
+  },
 ];

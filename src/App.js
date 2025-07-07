@@ -5,13 +5,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Men    from "./Pages/Men/Men.jsx";
+import Women from "./Pages/Women/Women.jsx";
+import Home from "./Pages/Home/Home.jsx";
+import Sales from "./Pages/Sales/Sales.jsx";
 
 /* placeholder for now */
-const Home = () => (
-  <main style={{ padding: "2rem" }}>
-    <h1>Welcome to Sol &amp; You</h1>
-  </main>
-);
 
 export default function App() {
   return (
@@ -26,7 +24,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/men" element={<Men />} />
-          {/* add more routes later */}
+          <Route path="/women" element={<Women />} />
+          <Route path="/sales" element={<Sales/>}/>
+          
         </Routes>
       </>
     </BrowserRouter>

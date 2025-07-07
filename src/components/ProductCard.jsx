@@ -22,7 +22,8 @@ export default function ProductCard({ product }) {
 
       {/* Textual content */}
       <div className="card-content">
-        <h3>{`Mens ${name}`}</h3>
+        <h3>{product.gender === "women" ? "Women" : product.gender === "men" ? "Men" : "Kids"} {name}</h3>
+
         <p className="brand">{brand}</p>
 
         <p className="price">
