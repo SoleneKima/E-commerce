@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import "../Home/Home.css";
 import { Link } from 'react-router-dom';
 import menHome from '../../components/assets/Home/Men.jpg';
@@ -11,7 +11,7 @@ function Home() {
     <div className='home-content'> 
       <header className='home-header'>
         <h1> 
-           " Your online's store for quality shoes, refined style and unparalleled comfort "</h1>
+           " Your online store for quality shoes, refined style and unparalleled comfort "</h1>
       </header>
 
       {/*Content of Home Page*/}

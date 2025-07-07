@@ -34,6 +34,7 @@ export default function App() {
           <Route path="/checkout" element={<Checkout />} />
         <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/women" element={<Women />} />
+          <Route path="/women/:type" element={<Women />} />
           <Route path="/sales" element={<Sales/>}/>
           
         </Routes>

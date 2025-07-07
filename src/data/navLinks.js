@@ -5,7 +5,7 @@ export const navLinks = [
   //Facets for Women Link
   { label: "Women", 
     path: "/women",
-    sub: ["New","Heels","Sneakers","Sandals"],
+    sub: ["Heels","Sneakers","Sandals"],
   },
   
   // Facets for Men Link
@@ -31,6 +31,6 @@ export const navLinks = [
 
   // Facets for Sales Link
   { label: "Sales", path: "/sales" ,
-    sub:["Women","Men","Kids"],
+    
   },
 ];
