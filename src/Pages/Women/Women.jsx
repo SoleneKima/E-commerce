@@ -1,37 +1,23 @@
 import React from 'react'
 import "../Women/Women.css";
 import { products } from "../../data/product";
-import { useLocation } from 'react-router-dom';
+
 import ProductCard from "../../components/ProductCard";
+import { useParams } from "react-router-dom";
 
-function useQuery(){
-  return new URLSearchParams(useLocation().search);
-}
+export default function Women() {
+  const { type } = useParams(); // get the type from the URL
+  const womenShoes = products.filter(p => p.gender === "women" && (!type || p.type === type));
 
-function Women() {
-  const query= useQuery();
-  const filter=query.get("filter");
-  const womenProducts=products.filter(p=>p.gender==="women");
-
-  const filtered= womenProducts.filter(p=>{
-    if (filter==="new") return p.isNew;
-    if (filter==="heels") return p.type==="heels";
-    if(filter==="sneakers") return p.type==="sneakers";
-    if (filter==="sandals") return p.type==="sandals";
-    return true;
-  });
-  
   return (
-    <main className='women-page'>
-      <h1>Women'shoes {filter && '-${filter}'}</h1>
+    <main className="men-page">
+      <h1>Women’s Shoes</h1>
 
       <section className="card-grid">
-              {filtered.map(p => (
-                <ProductCard key={p.id} product={p} />
-              ))}
-        </section>
+        {womenShoes.map(p => (
+          <ProductCard key={p.id} product={p} />
+        ))}
+      </section>
     </main>
-  )
+  );
 }
-
-export default Women

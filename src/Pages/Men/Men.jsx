@@ -1,9 +1,11 @@
 
+import { useParams } from "react-router-dom";
 import { products } from "../../data/product";
 import ProductCard from "../../components/ProductCard";
 import "../Men/Men.css";
 export default function Men() {
-  const menShoes = products.filter(p => p.gender === "men");
+  const { type } = useParams(); // get the type from the URL
+  const menShoes = products.filter(p => p.gender === "men" && (!type || p.type === type));
 
   return (
     <main className="men-page">

@@ -1,0 +1,68 @@
+.checkout-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: sans-serif;
+}
+
+/* common field wrapper */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.field label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+.field input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* width utilities */
+.field.full        { width: 100%; }
+.field.half        { width: 48%; }
+.field.two-thirds  { width: 65%; }
+.field.one-sixth   { width: 15%; }
+
+/* lay out personal info form as grid */
+.info-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+/* payment form style */
+.payment-form {
+  background: rgba(255,255,255,0.8);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* align expiration & CVV side‐by‐side inside payment form */
+.payment-form .field {
+  margin-bottom: 1rem;
+}
+
+/* submit button container aligns to right */
+.payment-form .actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+.payment-form .actions .submit {
+  background: #064c1a;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -12,14 +12,25 @@ export const navLinks = [
   {
     label: "Men",
     path: "/men",
-    sub: ["New","Sneakers","Loafers", "Boots","Dress Shoes" ],
+    sub: [
+      "Sneakers",
+      "Loafers",
+      "Rainboots",
+      
+    ],
   },
   
   //Facets for Kids Link
-  { label: "Kids", path: "/kids" },
+  { label: "Kids",
+     path: "/kids",
+     sub: [
+      "Boys", 
+      "Girls",
+    ],
+  },
 
   // Facets for Sales Link
-  { label: "Sales", path: "/sale" ,
+  { label: "Sales", path: "/sales" ,
     sub:["Women","Men","Kids"],
   },
 ];

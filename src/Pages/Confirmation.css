@@ -1,0 +1,34 @@
+/* src/Pages/Confirmation.css */
+
+.confirmation-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* hide the radio inputs */
+.star-rating input {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.star:hover {
+  transform: scale(1.2);
+}
+
+.thanks {
+  margin-top: 1rem;
+  font-weight: bold;
+}

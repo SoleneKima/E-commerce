@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);    // burger
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState(null); // hover MEN
   const { totalItems } = useCart();
 
   return (
@@ -22,12 +21,12 @@ export default function Navbar() {
         </div>
 
         {/* main links */}
-        <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
+        <ul className="nav-menu">
           {navLinks.map(link => (
             <li
               key={link.label}
-              onMouseEnter={() => setActiveMenu(link.label)}
-              onMouseLeave={() => setActiveMenu(null)}
+              className = "nav-item"
+              
             >
               {/* turn the label into a router link */}
               <Link to={link.path} className="top-link">
@@ -35,23 +34,25 @@ export default function Navbar() {
               </Link>
 
               {/* dropdown only if link.sub exists */}
-              {link.sub && activeMenu === link.label && (
+              {link.sub && (
                 <ul className="dropdown">
                   {link.sub.map(item => (
                     <li key={item}>
-  <Link
-    to={`${link.path}?filter=${item.toLowerCase()}`}
-    className="dropdown-link"
-  >
-    {item}
-  </Link>
-</li>
-
+                      <Link
+                        to={`${link.path}/${item
+                          .toLowerCase()
+                          .replace(/\s+/g, "-")}`}
+                        className="dropdown-link"
+                      >
+                        {item}
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               )}
             </li>
           ))}
+                
         </ul>
 
         {/* cart icon */}
